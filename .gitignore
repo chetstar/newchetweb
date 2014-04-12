@@ -1,6 +1,12 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.pyc
+venv
+*~
+.DS_Store
+flask
+virtualenv.py
 
 # C extensions
 *.so
