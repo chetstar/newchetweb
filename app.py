@@ -1,12 +1,13 @@
 import os
 from flask import Flask, render_template, send_from_directory
+from flask_bootstrap import Bootstrap
 
 # initialization
 app = Flask(__name__)
 app.config.update(
     DEBUG = True,
 )
-
+Bootstrap(app)
 # controllers
 # controllers
 @app.route('/favicon.ico')
