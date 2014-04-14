@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, send_from_directory
 from flask_bootstrap import Bootstrap
-from flask.ext.sqlalchemy import SQLAlchemy
+# from flask.ext.sqlalchemy import SQLAlchemy
 
 # initialization
 app = Flask(__name__)
