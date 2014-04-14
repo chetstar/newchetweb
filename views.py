@@ -1,5 +1,8 @@
 from app import app
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request, flash
+from forms import ContactForm
+
+app.secret_key = 'development key'
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -7,4 +10,5 @@ def page_not_found(e):
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    form = ContactForm()
+    return render_template('index.html', form=form)
