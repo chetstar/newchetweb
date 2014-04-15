@@ -8,7 +8,11 @@ app.secret_key = 'development key'
 def page_not_found(e):
     return render_template('404.html'), 404
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def index():
     form = ContactForm()
-    return render_template('index.html', form=form)
+    if request.method == 'POST':
+       return 'Form posted.'
+ 
+    elif request.method == 'GET':
+       return render_template('index.html', form=form)

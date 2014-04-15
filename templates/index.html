@@ -1,4 +1,5 @@
 {% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -238,6 +239,17 @@ quality with data visualization and drill down functions.
                     <div class="col-md-6  " data-scrollreveal="enter right and move 100px, wait 0.4s">
                         <h3>Drop a Line or Hire Me </h3>
                         <hr />
+                         <form class="form form-horizontal" method="post" role="form">
+                       {{ form.hidden_tag() }}
+  {{ wtf.form_errors(form, hiddens="only") }}
+  {{ wtf.form_field(form.name) }}
+  {{ wtf.form_field(form.email) }}
+    {{ wtf.form_field(form.subject) }}
+  {{ wtf.form_field(form.ref) }}
+    {{ wtf.form_field(form.message) }}
+    {{ wtf.form_field(form.submit) }}
+</form>
+                        <form>
                         <form>
                             <div class="row">
                                 <div class="col-md-6 ">
