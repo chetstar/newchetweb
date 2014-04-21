@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, render_template, send_from_directory, request, flash
+from flask import Flask, render_template, send_from_directory, request, flash,redirect,url_for
 from forms import ContactForm
 
 app.secret_key = 'development key'
@@ -8,11 +8,15 @@ app.secret_key = 'development key'
 def page_not_found(e):
     return render_template('404.html'), 404
 
+
 @app.route("/", methods=['GET', 'POST'])
 def index():
     form = ContactForm()
     if request.method == 'POST':
-       return 'Form posted.'
- 
+        if form.validate() == False:
+            flash('All fields are required.')
+            return redirect(url_for('index'))
+        else:
+            return 'Form posted.'
     elif request.method == 'GET':
        return render_template('index.html', form=form)

@@ -241,51 +241,12 @@ quality with data visualization and drill down functions.
                         <hr />
                          <form class="form form-horizontal" method="post" role="form">
                        {{ form.hidden_tag() }}
-  {{ wtf.form_errors(form, hiddens="only") }}
-  {{ wtf.form_field(form.name) }}
-  {{ wtf.form_field(form.email) }}
-    {{ wtf.form_field(form.subject) }}
-  {{ wtf.form_field(form.ref) }}
-    {{ wtf.form_field(form.message) }}
-    {{ wtf.form_field(form.submit) }}
+                       {% for message in get_flashed_messages() %}
+                       <span style="color: red;">[{{ message }}]</span>
+{% endfor %}
+{{ wtf.quick_form(form) }}
 </form>
-                        <form>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 ">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address">
-                                    </div>
-                                </div>
-                            </div>
-                              <div class="row">
-                                <div class="col-md-6 ">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Subject">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 ">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="Ref. (IF any)">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 ">
-                                    <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="3"  placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary">Submit Request</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                        
                     </div>
                     
                 </div>
