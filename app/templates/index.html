@@ -1,0 +1,282 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+{% block title %}Analyst Chet Meinzer{% endblock %}
+{% block head %}
+{{ super() }}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Built by Chet Meinzer using Flask-bootstrap</title>
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--BOOTSTRAP MAIN STYLES -->
+    <link href="static/css/bootstrap.css" rel="stylesheet" />
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+    <!--CUSTOM STYLE -->
+    <link href="static/css/style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+    {% endblock %}
+{% block navbar %}
+<body>   
+<br><br>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CHET MEINZER</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#header-section">HOME</a></li>
+                    <li><a href="#about-section">ABOUT</a></li>
+                    <li><a href="#products-section">MY-WORK</a></li>
+                    <li><a href="#contact-section">HIRE ME</a></li>
+                    <li><a href="#contact-section">CONTACT</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+    <div id="header-section">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1><strong> Chet Brian Meinzer</strong>          
+                     
+                    </h1>
+                     <br /> <br /> <br />
+                    <h2> Visualizations / Business Intelligence</h2>
+                     <br />
+                  <a href="#about-section">  <i class="fa fa-angle-double-down fa-5x down-icon"></i> </a>
+                </div>
+            </div>
+           
+        </div>
+       
+    </div> 
+
+    <div id="about-section" >
+        <div class="container" >
+            <div class="row main-top-margin text-center">
+                <div class="col-md-8 col-md-offset-2 " data-scrollreveal="enter top and move 100px, wait 0.3s">
+                    <h1>Who Am I ?</h1>
+                    <h4>
+                       Developer, Analyst and Psychometrician
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row main-low-margin text-center">
+                <div class="col-md-3 " data-scrollreveal="enter left and move 100px, wait 0.4s">
+                    <img class="img-circle" src="static/img/beach.JPG" alt="">
+                    <h4><strong>Chet Meinzer</strong> </h4>
+                    <p>
+                        Always learning, collaborating and solving problems.  
+
+                    </p>
+                    <p>
+                       <a href="https://github.com/chetstar"><i class="fa fa-github-alt fa-2x color-github"></i></a>
+                        <a href="http://stackoverflow.com/users/2026611/chet-meinzer"><i class="fa fa-stack-overflow fa-2x color-stackoverflow"></i></a>
+                        <a href="http://www.ratemyprofessors.com/ShowRatings.jsp?tid=1438143"><i class="fa fa-spinner fa-spin fa-2x "></i></a>
+                        <a href="https://www.linkedin.com/profile/view?id=124734980&trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin-square fa-2x color-linkedin"></i></a>
+                        <a href="https://www.flickr.com/photos/57005820@N00/"><i class="fa fa-flickr fa-2x color-flickr"></i></a>
+
+                    </p>
+
+                </div>
+             
+                <div class="col-md-7 col-sm-7 col-md-offset-1  text-justify" data-scrollreveal="enter right and move 100px, wait 0.4s">
+                    <h3> Server-side data scientist working on database scalability 
+                        and data manipulation, algorithm design and unit-testing.  </h3>
+                    <p>
+                         Primarily work in the Python, Pandas, SQLAlchemy, (experience with web frameworks Django, 
+                         Flask, javascript, jquery, ajax) (experimenting with Java, noSQL-mongoDB, Hadoop), and 
+                         specialize in translating r and antiquated stats languages like SPSS, STATA and SAS into python.
+
+I'm a regular at NoiseBridge SF to study numpy pandas sqlalchemy django flask jinja2 smtplib bs4 and hadoop. 
+At NB, I am collaborating on an open source flask web app for visualizing word frequency of political statements 
+over time using the Sunlight Foundation API. The application features user logins and saved searches using 
+bootstrap, flot, ajax, jQuery, and basic js. coming soon to domain Poligraphed.com
+https://github.com/PyclassAPIProjectOrg/Poligraphed
+
+                    </p>
+                    <p>
+                         -Technical lead on a seven-person team and subject matter expert on data usage, 
+                         extraction, manipulation, and input to analytical models
+-Developed the back-end of dashboards that can be used to track and improve data 
+quality with data visualization and drill down functions.
+-Designed a system to analyze 1 billion records nightly looking for system-wide trends
+-Streamlined existing code with list comprehension and looping
+-Built custom business analytic tools to show variance and deviation of costs
+-Dramatically redesigned data flow using python pipelines to SQL databases
+-Designed code for data quality initiatives in order to monitor programs with alarm reports 
+
+                    </p>
+                </div>
+            </div>
+              <!-- ./ Row Content-->
+        </div>
+    </div>
+    <!-- END ABOUT SECTION -->
+   
+   
+    <!--WORK/PRODUCTS SECTION -->
+    <div id="products-section" >
+         <div class="container" >
+            <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
+                <div class="col-md-8 col-md-offset-2 ">
+                    <h1>Clients</h1>
+                    <h4>
+                       Coming soon...
+                    </h4>
+                </div>
+            </div>
+             <!-- ./ Main Heading-->
+             <hr />
+            <div class="row main-low-margin" >
+                <div class="col-md-10  col-md-offset-1 ">
+ <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
+                    <img src="static/img/product/prod1.jpg" alt="">
+                </div>
+                <div class="col-md-8 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                    <h4 >  <strong class="color-red">Client Portfolio No # 1 </strong></h4>
+                    <p>
+                        Coming soon....
+                    </p>
+                    <p>
+                        coming soon....
+                    </p>
+                    <p>
+                        <i class="fa fa-check"></i> Responsive Design<br />
+                     <i class="fa fa-check"></i> 24x7 Support <br />
+                       <i class="fa fa-check"></i> Well Documented<br />
+                    </p>
+                    <a href="#" class="btn btn-success" >See Live Demo</a>
+                </div>
+                </div>
+               
+            </div>
+            <!-- ./ Row Content-->
+            <hr />
+           <div class="row main-low-margin bottam-pad" >
+
+                 <div class="col-md-10  col-md-offset-1 ">
+                <div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">
+                    <h4 >  <strong class="color-red">Client  Portfolio No # 2 </strong></h4>
+                    <p>
+                        Coming soon...
+                    </p>
+                    <p>
+                        Coming soon..
+                    </p>
+                    <p>
+                        <i class="fa fa-check"></i> Responsive Design<br />
+                     <i class="fa fa-check"></i> 24x7 Support <br />
+                       <i class="fa fa-check"></i> Well Documented<br />
+                    </p>
+                    <a href="#" class="btn btn-danger" > See Live Demo</a>
+                </div>
+                <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                    
+                    <img class="img-margin-product" src="static/img/product/prod2.jpg" alt="">
+                </div>
+                     </div>
+            </div>
+              <!-- ./ Row Content-->
+        </div>
+    </div>
+    <!--END WORK/PRODUCTS SECTION -->
+    <!--CONTACT SECTION -->
+    <div id="contact-section">
+        <div class="container" >
+            <div class="row main-top-margin text-center">
+                <div class="col-md-8 col-md-offset-2 " data-scrollreveal="enter top and move 100px, wait 0.3s">
+                    <h1>Contact / Hire Me</h1>
+                    <h4>
+                       Coming soon...
+                    </h4>
+                </div>
+            </div>
+            <!-- ./ Main Heading-->
+            <div class="row">
+                <div class="col-md-12  col-sm-12 ">
+                    <div class="col-md-6  " data-scrollreveal="enter left and move 100px, wait 0.4s">
+                        <h3> My Work Location</h3>
+                        <hr />
+                        <p>
+                        9th and Folsom,<br />
+                            SF, CA USA.<br />                          
+                        Call: 415.322.0963<br />
+                        Email: chetmeinzersf@gmail.com<br />
+                            </p>
+                       
+                    </div>
+                    <div class="col-md-6  " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                        <h3>Drop a Line or Hire Me </h3>
+                        <hr />
+                         <form class="form form-horizontal" method="post" role="form">
+                       {{ form.hidden_tag() }}
+                       {% for message in get_flashed_messages() %}
+                       <span style="color: red;">[{{ message }}]</span>
+{% endfor %}
+{{ wtf.quick_form(form) }}
+<br>
+</form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+             <!-- ./ Row Content-->
+        </div>
+    </div>  
+{% endblock %}
+            {% block scripts %}
+    <div id="footer">
+        <div class="container">
+            <div class="row ">
+                &copy; 2014 www.ChetMeinzer.com | All Right Reserved 				
+
+            </div>
+            
+        </div>
+       
+    </div>  
+    <!--END FOOTER SECTION --> 
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+
+    <script src="static/js/jquery.js"></script>
+    <!-- CORE BOOTSTRAP LIBRARY -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <script src="static/js/scrollReveal.js"></script>
+
+    <script src="static/js/custom.js"></script>
+</body>
+</html>
+{% endblock %}
