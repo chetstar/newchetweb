@@ -32,3 +32,12 @@ def contact():
             return 'Form posted.'
     elif request.method == 'GET':
        return render_template('index.html', form=form)
+from emails import follower_notification
+
+# @app.route('/follow/<nickname>')
+# @login_required
+# def follow(nickname):
+#     user = User.query.filter_by(nickname = nickname).first()
+#     # ...
+#     follower_notification(user, g.user)
+#     return redirect(url_for('user', nickname = nickname))
