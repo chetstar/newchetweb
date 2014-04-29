@@ -13,7 +13,7 @@ MAIL_PORT = 465
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
 MAIL_USERNAME = 'chetmeinzersf'
-MAIL_PASSWORD = os.environ['cpw']
+MAIL_PASSWORD = os.environ.get('cpw')
 print MAIL_PASSWORD
 # administrator list
 ADMINS = ['chetstar@gmail.com']
