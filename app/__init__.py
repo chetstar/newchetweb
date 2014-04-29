@@ -4,11 +4,9 @@ from flask_bootstrap import Bootstrap
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.mail import Mail
 
-mail = Mail(app)
-# from flask.ext.sqlalchemy import SQLAlchemy
-
 # initialization
 app = Flask(__name__)
+
 app.config.update(
     DEBUG = True,
 )
@@ -16,8 +14,12 @@ app.config.from_object('config')
 #now i can access config vars via app.config['VAR_Name']
 Bootstrap(app)
 db = SQLAlchemy(app)
+mail = Mail(app)
+
+
 from views import *
 from models import *
+
 # launch
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
