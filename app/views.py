@@ -11,18 +11,28 @@ app.secret_key = 'development key'
 def page_not_found(e):
     return render_template('404.html'), 404
 
+def flash_errors(form):
+    for field, errors in form.errors.items():
+        for error in errors:
+            flash(u"Error in the %s field - %s" % (
+                getattr(form, field).label.text,
+                error
+            ))
+
 @app.route("/", methods=['GET', 'POST'])
 def index():
     form = ContactForm()
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
+            flash_errors(form)
             return redirect(url_for('index'))
         else:
             subject=form.subject.data
             message=form.name.data+' said '+form.message.data+" form "+form.email.data
             send_email(subject,'doesitmatter',['chetstar@gmail.com'],message)
             flash('Thank you for your message')
+            flash_errors(form)
             return redirect(url_for('index'))
     elif request.method == 'GET':
        return render_template('index.html', form=form)
