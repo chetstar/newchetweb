@@ -1,7 +1,7 @@
-from app import app
+from app import app, db
 from flask import Flask, render_template, send_from_directory, request, flash,redirect,url_for
 from forms import ContactForm
-# from app import mail
+import models
 from emails import send_email
 # from emails import follower_notification
 
@@ -28,6 +28,9 @@ def index():
             flash_errors(form)
             return redirect(url_for('index'))
         else:
+            x=models.User(name=form.name.data,email=form.email.data,subject=form.subject.data,message=form.message.data)
+            db.session.add(x)
+            db.session.commit()
             subject=form.subject.data
             message=form.name.data+' said '+form.message.data+" form "+form.email.data
             send_email(subject,'doesitmatter',['chetstar@gmail.com'],message)

@@ -47,6 +47,9 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">CHET MEINZER</a>
+                  {% for message in get_flashed_messages() %}
+                       <span style="color: red;">[{{ message }}]</span>
+{% endfor %}
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -62,6 +65,7 @@
     </div>
 {% endblock %}
 {% block content %}
+
     <div id="header-section">
         <div class="container">
             <div class="row centered">
