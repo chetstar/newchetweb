@@ -157,31 +157,39 @@ quality with data visualization and supports data drill down functions.
                        Alameda County Health Care Services<br>
                        Davis Y. Ja & Associates
                     </h4>
+                </div></div></div></div><p></p>  <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
+                <div class="col-md-8 col-md-offset-2 ">
+           
+                       <h3>Interactive Dashboards</h3><br>
+                       </div></div>
                 </div>
             </div>
              <!-- ./ Main Heading-->
-             <hr />
+             <hr /></div>
 
             <div class="row main-low-margin" >
-                <div class="col-md-11  col-md-offset-1 ">
- <div class="col-md-10 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
+                 <div class="col-md-11  col-md-offset-1 ">
+                 <div class="col-md-8 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
                     <img src="static/img/product/poligraphed.jpeg" alt="">
                 </div>
-                <div class="col-md-4 " data-scrollreveal="enter left and move 100px, wait 0.4s">
-                    <h4 >  <strong class="color-red">Contract Monitoring Dashboard </strong></h4>
+
+                 <div class="col-md-4 "></div>
+                <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                    <h2 >  <strong class="color-red">Poligraphed </strong></h2>
                     <p>
-                        <i>Tracks real-time costs along side expectations
+                        <i>Congressional speech data from Sunlight Foundation API
                     </p>
                     <p>
-                        Meets actuarial needs for project management and recomends action items</p></i>
+                        Custom graphs by day month or year for any phrase</p></i>
                     </p>
-                    <p>
-                        <i class="fa fa-check"></i> Responsive Design<br />
-                     <i class="fa fa-check"></i> 24x7 Support <br />
-                       <i class="fa fa-check"></i> Well Documented<br />
+                    <p> 
+                        <i class="fa fa-check"></i> An open source web app<br />
+                     <i class="fa fa-check"></i> visualizing word frequency <br />
+                       <i class="fa fa-check"></i> user logins and saved searches<br />
                     </p>
-                    a href="poligraphed.heroku.com" class="btn btn-success" >See Live Demo</a>
-                </div>
+                    <a href="https://poligraphed.heroku.com/graph" class="btn btn-success" >See Live Demo</a><br><br><p></p>
+                                  
+ 
                 </div>
                
             </div>
@@ -190,8 +198,8 @@ quality with data visualization and supports data drill down functions.
            <div class="row main-low-margin bottam-pad" >
 
                  <div class="col-md-10  col-md-offset-1 ">
-                <div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">
-                    <h4 >  <strong class="color-red">Hospital Recidivism Tracking Dashboard</strong></h4>
+                <div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s"><p><br></p>
+                    <h2 >  <strong class="color-red">Hospital Recidivism Tracking Dashboard</strong></h2>
                     <p>
                         <i>Filter by hospital
                     </p>
@@ -251,46 +259,7 @@ quality with data visualization and supports data drill down functions.
                        {% for message in get_flashed_messages() %}
                        <span style="color: red;">[{{ message }}]</span>
 {% endfor %}
-                    <form class="form form-horizontal" role="form" method="post">
-                        <div style="display:none;"></div>
-                        <div style="display:none;"></div>
-                        <div class="form-group">
-                            <label class="control-label" for="name">
-
-                                Name
-
-                            </label>
-                            <input id="name" class="form-control" type="text" value="x" name="name"></input>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="email">
-
-                                Email
-
-                            </label>
-                            <input id="email" class="form-control" type="text" value="x" name="email"></input>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="subject">
-
-                                Subject
-
-                            </label>
-                            <input id="subject" class="form-control" type="text" value="" name="subject"></input>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="message">
-
-                                Message
-
-                            </label>
-                            <textarea id="message" class="form-control" name="message" ></textarea>
-                        </div>
-<div class="input-append date">
-    <input value="12-02-2012">
-    <span class="add-on"><i class="icon-th"></i></span>
-</div>
-                        <input id="submit" class="btn btn-default" type="submit" value="Send" name="submit"></input>
+                  {{ wtf.quick_form(form) }}
                     </form>
                     <!--
 
