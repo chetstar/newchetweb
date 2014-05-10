@@ -161,12 +161,13 @@ quality with data visualization and supports data drill down functions.
             </div>
              <!-- ./ Main Heading-->
              <hr />
+
             <div class="row main-low-margin" >
                 <div class="col-md-11  col-md-offset-1 ">
- <div class="col-md-4 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
-                    <img src="static/img/product/prod1.jpg" alt="">
+ <div class="col-md-10 col-sm-4" data-scrollreveal="enter left and move 100px, wait 0.8s">
+                    <img src="static/img/product/poligraphed.jpeg" alt="">
                 </div>
-                <div class="col-md-8 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                <div class="col-md-4 " data-scrollreveal="enter left and move 100px, wait 0.4s">
                     <h4 >  <strong class="color-red">Contract Monitoring Dashboard </strong></h4>
                     <p>
                         <i>Tracks real-time costs along side expectations
@@ -179,7 +180,7 @@ quality with data visualization and supports data drill down functions.
                      <i class="fa fa-check"></i> 24x7 Support <br />
                        <i class="fa fa-check"></i> Well Documented<br />
                     </p>
-                    <!--<a href="#" class="btn btn-success" >See Live Demo</a>-->
+                    a href="poligraphed.heroku.com" class="btn btn-success" >See Live Demo</a>
                 </div>
                 </div>
                
@@ -250,7 +251,64 @@ quality with data visualization and supports data drill down functions.
                        {% for message in get_flashed_messages() %}
                        <span style="color: red;">[{{ message }}]</span>
 {% endfor %}
-{{ wtf.quick_form(form) }}
+                    <form class="form form-horizontal" role="form" method="post">
+                        <div style="display:none;"></div>
+                        <div style="display:none;"></div>
+                        <div class="form-group">
+                            <label class="control-label" for="name">
+
+                                Name
+
+                            </label>
+                            <input id="name" class="form-control" type="text" value="x" name="name"></input>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">
+
+                                Email
+
+                            </label>
+                            <input id="email" class="form-control" type="text" value="x" name="email"></input>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="subject">
+
+                                Subject
+
+                            </label>
+                            <input id="subject" class="form-control" type="text" value="" name="subject"></input>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="message">
+
+                                Message
+
+                            </label>
+                            <textarea id="message" class="form-control" name="message" ></textarea>
+                        </div>
+<div class="input-append date">
+    <input value="12-02-2012">
+    <span class="add-on"><i class="icon-th"></i></span>
+</div>
+                        <input id="submit" class="btn btn-default" type="submit" value="Send" name="submit"></input>
+                    </form>
+                    <!--
+
+                     Button trigger modal 
+
+                    -->
+                    <br></br>
+                </div>
+            </div>
+        </div>
+        <!--
+
+         ./ Row Content
+
+        -->
+    </div>
+
+
 <!-- Button trigger modal -->
 
 <br>
