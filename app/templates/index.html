@@ -254,13 +254,24 @@ quality with data visualization and supports data drill down functions.
                     <div class="col-md-6  " data-scrollreveal="enter right and move 100px, wait 0.4s">
                         <h3>Join the Mailing List or Hire Me </h3>
                         <hr />
-                         <form class="form form-horizontal" method="post" role="form">
+
                        {{ form.hidden_tag() }}
                        {% for message in get_flashed_messages() %}
                        <span style="color: red;">[{{ message }}]</span>
-{% endfor %}
-                  {{ wtf.quick_form(form) }}
+                        {% endfor %}
+                                                <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Do it</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <form class="form form-horiztonal" method="post" role="form"><br>
+     <h1>I'm excited to hear from you<br></h1><br>
+                  {{ wtf.quick_form(form) }}<br>
                     </form>
+    </div>
+  </div>
+</div>
+                       
                     <!--
 
                      Button trigger modal 
