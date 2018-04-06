@@ -228,8 +228,44 @@
                     <h4>
                        Available for data consulting or web development
                     </h4>
-            
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
                         <h3> My Work Location</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.773972, lng: -122.411297};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyAxpn4gW6HvYVZgkqRplgNDYCIZpFAdsu4
+&callback=initMap">
+    </script>
+  </body>
+</html>  
+
+
+	
+
                         <hr />
                         <p>
                         9th and Folsom,<br />
